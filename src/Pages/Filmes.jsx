@@ -16,14 +16,14 @@ function Filmes() {
         <>
         <div className="bg-black">
         <h1 className="text-3xl p-20 pt-10 pb-10">Filmes</h1>
-        <div className="listaFilmes flex flex-row gap-16 flex-wrap p-20 pt-0">
+        <div className="listaFilmes flex justify-between gap-16 flex-wrap p-20 pt-0">
             {
                 filmes.map(
                     filme =>(
-                        <div key={filme.id} className="card-filme bg-black text-white rounded-2xl">
-                            <h1 className="text-2xl text-wrap text-center  pb-1" key={filmes}>{filme.title}</h1>
+                        <div key={filme.id} className="card-filme bg-black text-white rounded-2xl h-[300px] w-[150px] flex flex-col justify-around">
+                            <h1 className="text-wrap text-center  pb-1" key={filmes}>{filme.title}</h1>
                             <img className="w-40" src={`https://image.tmdb.org/t/p/w92/${filme.poster_path}`} alt="" />
-                            <Link to={`${filme.id}`} className="flex justify-center bg-red-700 text-branco rounded p-5 pt-1 pb-1">Saiba Mais</Link>
+                            <Link to={`${filme.id}`} className="flex justify-center bg-red-700 text-white rounded p-5 pt-1 pb-1">Saiba Mais</Link>
                         </div>
                     )
                 )
